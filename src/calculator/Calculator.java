@@ -1,11 +1,16 @@
-package calculator;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package simplecalculator;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Calculator extends JFrame implements ActionListener {
+
+public class SimpleCalculator extends JFrame implements ActionListener {
     // Components
     private JTextField display;
     private JButton[] numberButtons;
@@ -18,7 +23,7 @@ public class Calculator extends JFrame implements ActionListener {
     private String operator = "";
     private boolean isOperatorClicked = false;
 
-    public Calculator() {
+    public SimpleCalculator() {
         setTitle("Simple Calculator");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(300, 400);
@@ -57,10 +62,10 @@ public class Calculator extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        new Calculator();
+        new SimpleCalculator();
     }
 
-    @Override
+    
     public void actionPerformed(ActionEvent e) {
         String command = e.getActionCommand();
         if (Character.isDigit(command.charAt(0))) {
@@ -112,3 +117,4 @@ public class Calculator extends JFrame implements ActionListener {
         operator = "";
     }
 }
+
